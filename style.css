@@ -39,7 +39,7 @@ form {
   justify-content: space-between;
 }
 
-.input{
+.input {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -50,7 +50,7 @@ form {
   font-size: 0.7rem;
 }
 
-.input-container{
+.input-container {
   position: relative;
 }
 
@@ -61,12 +61,15 @@ form {
   padding: 0.3rem 0rem;
   font-size: 0.6rem;
   opacity: 0.6;
+  transform-origin: left;
 }
 
-.line-svg{
+.line-svg {
   position: absolute;
   left: 0;
   bottom: 0;
+  overflow: visible;
+  opacity: 0.8;
 }
 
 .checkbox-label {
@@ -98,7 +101,7 @@ form {
 
 .checkmark,
 .checkbox {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -114,7 +117,7 @@ form {
   top: 100%;
 }
 
-.tick-mark{
+.tick-mark {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -122,7 +125,7 @@ form {
   z-index: 2;
 }
 
-button{
+button {
   font-family: "Poppins" sans-serif;
   font-weight: 500;
   font-size: 0.6rem;
@@ -134,4 +137,39 @@ button{
   cursor: pointer;
   margin-top: 0rem;
   align-self: flex-start;
+}
+
+#character {
+  position: absolute;
+  transform: scale(0.6) translate(0%, 30%);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+}
+
+.submitted {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #777474;
+  font-size: 1rem;
+  pointer-events: none;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@media screen and (max-width: 812px) {
+  form {
+    width: 90vw;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 8rem 3rem;
+  }
+  .line-svg {
+    width: 100%;
+  }
+  #character {
+    transform: scale(0.4) translate(0%, 30%);
+  }
 }
